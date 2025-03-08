@@ -1,6 +1,9 @@
 # Claims Management API
 A Node.js + Express.js backend API for managing insurance claims, storing data in MongoDB, and exporting claims as an Excel file.
 
+🔗 GitHub + Render:  [Deployed Link](https://claims-api.onrender.com)
+
+
 ## 📌 Features
 ✅ CRUD operations for insurance claims  
 ✅ Real-time MongoDB storage with Mongoose  
