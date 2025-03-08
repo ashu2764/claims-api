@@ -1,0 +1,34 @@
+{
+  "name": "policy_claim_api",
+  "version": "1.0.0",
+  "description": "A Node.js REST API for managing insurance claims with MongoDB, Excel export, and clean coding best practices.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -r -d docs ./src/controllers ./src/routes ./src/models ./src/config ./src/server.js",
+    "dev": "nodemon -r dotenv/config src/server.js"
+  },
+  "keywords": [
+    "Node",
+    "express",
+    "mongoDb",
+    "insurence",
+    "claims",
+    "rest-api"
+  ],
+  "author": "Ashwani Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "mongodb": "^6.14.2",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.4"
+  }
+}

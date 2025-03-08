@@ -1,0 +1,27 @@
+@startuml
+title Steps Taken for Clean Code
+
+start
+
+:📂 **Modularization**;
+:✔ Organized project into meaningful folders
+(models, controllers, routes, middlewares, config);
+:✔ Separated concerns for better maintainability;
+
+:📖 **Enhanced Readability & Maintainability**;
+:✔ Used meaningful function names ;
+:✔ Added JSDoc for API documentation;
+
+:⚠ **Error Handling**;
+:✔ Implemented centralized error handling
+with try-catch blocks;
+
+:🛡 **Security & Performance**;
+:✔ Environment variables (.env);
+
+:📈 **Scalability Considerations**;
+:✔ Used Mongoose Schema for structured data;
+:✔ Centralized database connection;
+
+stop
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+actor User
+
+participant "API Server (Express.js)" as API
+database "MongoDB (Claims DB)" as DB
+participant "Excel File Storage" as File
+
+User -> API : Create Claim (POST /api/v1/claims)
+API -> DB : Insert New Claim
+DB --> API : Return Created Claim
+API --> User : Respond with Created Claim
+
+User -> API : Get All Claims (GET /api/v1/claims)
+API -> DB : Fetch Claims Data
+DB --> API : Return Claims Data
+API --> User : Respond with Claims List
+
+User -> API : Get Claim by ID (GET /api/v1/claims/:id)
+API -> DB : Fetch Claim Data by ID
+DB --> API : Return Claim Data
+API --> User : Respond with Claim Details
+
+User -> API : Update Claim (PUT /api/v1/claims/:id)
+API -> DB : Update Claim Data
+DB --> API : Return Updated Claim
+API --> User : Respond with Updated Claim
+
+User -> API : Delete Claim (DELETE /api/v1/claims/:id)
+API -> DB : Remove Claim Data
+DB --> API : Confirmation
+API --> User : Respond with Success Message
+
+User -> API : Export Claims (GET /api/v1/claims/export)
+API -> DB : Fetch Claims Data
+API -> File : Generate Excel File
+API --> User : Provide Download Link
+
+User -> API : Download Claims Excel (GET /api/v1/claims/download)
+API -> File : Retrieve Excel File
+File --> API : Return Excel File
+API --> User : Send File for Download
+
+@enduml
